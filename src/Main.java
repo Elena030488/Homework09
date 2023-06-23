@@ -17,9 +17,9 @@ public class Main {
     public static void task1() {
         //Задача 1
         System.out.println("Задача 1");
-        int[] arr = generateRandomArray();
+        int[] monthExpences = generateRandomArray();
         int sum = 0;
-        for (int element : arr) {
+        for (int element : monthExpences) {
             sum += element;
         }
         System.out.println("Сумма трат за месяц составила " + sum + " рублей");
@@ -27,10 +27,10 @@ public class Main {
     public static void task2() {
         //Задача 2
         System.out.println("Задача 2");
-        int[] arr = generateRandomArray();
-        int maxExpense = 0;
-        int minExpense = 200_000;
-        for (int current : arr) {
+        int[] dayExpences = generateRandomArray();
+        int maxExpense = dayExpences[0];
+        int minExpense = dayExpences[0];
+        for (int current : dayExpences) {
             if (current > maxExpense) {
                 maxExpense = current;
             } else if (current < minExpense) {
@@ -42,14 +42,13 @@ public class Main {
     public static void task3() {
         //Задача 3
         System.out.println("Задача 3");
-        int[] arr = generateRandomArray();
+        int[] monthExpences = generateRandomArray();
         int sum = 0;
-        int days = 30;
         float monthlyAvarage;
-        for (int element : arr) {
+        for (int element : monthExpences) {
             sum += element;
         }
-        monthlyAvarage = (float) sum / days;
+        monthlyAvarage = (float) sum / monthExpences.length;
         System.out.println("Средняя сумма трат за месяц составила " + monthlyAvarage + " рублей");
     }
     public static void task4() {
